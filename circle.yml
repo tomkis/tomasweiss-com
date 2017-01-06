@@ -3,6 +3,7 @@ machine:
     Europe/Prague
   environment:
     NODE_ENV: production
+    NPM_CONFIG_PRODUCTION: false
   node:
     version: 5.0.0
   post:
