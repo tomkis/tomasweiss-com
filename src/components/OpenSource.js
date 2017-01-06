@@ -38,8 +38,8 @@ export default () => (
       </ul>
 
       <h3>Presentations</h3>
-      <p>I would like to share my ideas so I usually give couple presentations a
-      year on local events; WebExpo Prague, Reactive&nbsp;Roadshow
+      <p>I would like to spread the word so I usually give couple presentations a
+      year on local venues; WebExpo Prague, Reactive&nbsp;Roadshow
       (Bratislava, Vienna, Brno), PragueJS...</p>
       <div id="presentation-embed-38898340" />
     </div>

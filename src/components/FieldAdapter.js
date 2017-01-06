@@ -5,13 +5,13 @@ import Phone from 'react-phone-number-input';
 const renderField = (type, input) => {
   switch (type) {
     case 'email':
-      return <input type="email" {...input} />;
+      return <input type="email" {...input} placeholder="email@email.com" />;
 
     case 'textarea':
       return <textarea {...input} />;
 
     case 'phone':
-      return <Phone {...input} />;
+      return <Phone {...input} placeholder="44 123 123 1234" />;
 
     default:
       throw new Error(`Unknown field type ${type}`);
@@ -23,12 +23,16 @@ const FieldAdapter = ({
   input,
   meta: {
     touched,
-    error
+    error,
+    active,
+    visited
   }
 }) => (
   <div
     className={cx({
+      focused: active,
       touched,
+      visited,
       invalid: !!error
     })}
   >
@@ -45,7 +49,9 @@ FieldAdapter.propTypes = {
                                       // that matters is that the prop is spreadable object
   meta: PropTypes.shape({
     touched: PropTypes.bool.isRequired,
-    invalid: PropTypes.bool.isRequired
+    invalid: PropTypes.bool.isRequired,
+    active: PropTypes.bool.isRequired,
+    visited: PropTypes.bool.isRequired
   })
 };
 
