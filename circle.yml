@@ -1,0 +1,32 @@
+machine:
+  timezone:
+    Europe/Prague
+  environment:
+    NODE_ENV: test
+  node:
+    version: 5.0.0
+  post:
+    - npm install -g npm@3.x.x
+
+checkout:
+  post:
+    - '[[ ! -e "$(git rev-parse --git-dir)/shallow" ]] || git fetch --unshallow'
+
+dependencies:
+  cache_directories:
+    - node_modules
+  override:
+    - npm prune && npm install
+
+test:
+  override:
+    - npm test
+  post:
+    - git config user.name "circleci"
+    - git config user.email "herokuadmin@tomasweiss.com"
+
+deployment:
+  next:
+    branch: next
+    heroku:
+      appname: next-tomasweiss-com

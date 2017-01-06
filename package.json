@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git@github.com:tomkis1/tomasweiss-com.git"
   },
+  "engines": {
+    "node": ">=5.0.0",
+    "npm": ">=3.0.0"
+  },
   "homepage": "https://tomasweiss.com/",
   "scripts": {
     "build:be": "webpack --config ./webpack/webpack.config.prod.be.js",
