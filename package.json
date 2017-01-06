@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git@github.com:tomkis1/tomasweiss-com.git"
   },
-  "homepage": "https://www.javascripting.com/",
+  "homepage": "https://tomasweiss.com/",
   "scripts": {
     "build:be": "webpack --config ./webpack/webpack.config.prod.be.js",
     "build:fe": "webpack --config ./webpack/webpack.config.prod.fe.js",
