@@ -2,7 +2,7 @@ machine:
   timezone:
     Europe/Prague
   environment:
-    NODE_ENV: test
+    NODE_ENV: production
   node:
     version: 5.0.0
   post:
@@ -29,4 +29,4 @@ deployment:
   next:
     branch: develop
     heroku:
-      appname: next-tomasweiss-com
+      appname: tomasweiss-com-next
