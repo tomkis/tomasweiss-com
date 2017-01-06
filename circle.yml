@@ -29,5 +29,5 @@ test:
 deployment:
   next:
     branch: develop
-    heroku:
-      appname: tomasweiss-com-next
+    commands:
+      - git push -f git@heroku.com:tomasweiss-com-next.git $CIRCLE_SHA1:master
