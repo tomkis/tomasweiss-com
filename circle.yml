@@ -27,6 +27,6 @@ test:
 
 deployment:
   next:
-    branch: next
+    branch: develop
     heroku:
       appname: next-tomasweiss-com
