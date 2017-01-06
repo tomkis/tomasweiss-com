@@ -81,6 +81,13 @@ export default (dependencyProvider) => {
             window.reduxState = '${JSON.stringify(store.getState())}';
           </script>
           <script src="/${getJsFileName(appName)}"></script>
+          <script src='https://slideslive.com/embed_presentation.js'></script>
+          <script>
+              embed = new SlidesLiveEmbed('presentation-embed-38898340', {
+                  presentationId: '38898340',
+                  autoPlay: false // change to true to autoplay the embedded presentation
+              });
+          </script>
         </body>
       </html>
     `);
