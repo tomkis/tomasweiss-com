@@ -17,7 +17,7 @@ export default () => (
         so that developers don&lsquo;t need to hassle with the same problems over and over again. However, giving developer a choice yields in finer controlled composition of the
         final solution. Why restrain the developer to particular approach, they need a choice to build exactly what they (or client) need. This inevitably leads to hard choices being made
         in the early stages of development which are contrary to the developer&lsquo;s experience. Ecosystem of React and Redux is very fragmented therefore proper training or
-        consulting can save signifciant amount of resources in long term.
+        consulting can save significant amount of resources in long run.
       </p>
 
       <div className="consulting-items clearfix">
@@ -26,8 +26,7 @@ export default () => (
           <h3>JavaScript is rapidly evolving</h3>
           <p>
             Functional programming paradigm is gradually creeping into JavaScript and therefore developers need to adjust their style so that they can utilize the full power that
-            new features bring us. Do you just
-            need to get some practical experiences in using modern ES20xx code? Do you feel like your team could better utilize full power of functional programming? What about
+            new features bring us. Do you just need to get some practical experiences in using modern ES20xx code? Do you feel like your team could sieze more power of functional programming? What about
             relation between Functional Programming and modern front-end architecture with solid React/Redux foundation?
           </p>
         </div>
@@ -38,7 +37,7 @@ export default () => (
           <p>
             It&lsquo;s era of transpiling and composable divergency of all the possible libraries / tools makes it especially very hard to use unified build pipeline for any project.
             Therfore it&lsquo;s up to developer to tailor the boilerplate to fit their exact requirements. Webpack configuration is very clumsy and everything becomes even
-            more difficult to set up once you start thinking about all the possible combination of modern features. Do you need a hot-reloadable React application which pre-renders
+            more difficult to set up once you start thinking about all the possible combinations of modern features. Do you need a hot-reloadable React application which pre-renders
             HTML on the server?
           </p>
         </div>
@@ -69,7 +68,7 @@ export default () => (
       <h3>React based application audit</h3>
       <p>
         Do you have a running React application but your developers are struggling with scaling it up? Let me identify architecture bottlenecks and provide actionables to improve
-        the quality. React based application are especially very friendly towards gradual architectural refactoring.
+        the quality. React based application are especially very friendly towards gradual architectural refactoring. I offer a 2-day long remote audit of your code in fixed price of 899 &euro;.
       </p>
     </div>
   </section>
