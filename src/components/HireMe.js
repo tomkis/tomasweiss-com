@@ -40,7 +40,7 @@ const HireMeForm = reduxForm({
     action="/api/v1/hire-me"
     method="post"
   >
-    <p>Leave me your <b>e-mail</b></p>
+    <p>Fill in your <b>e-mail</b></p>
     <Field name="email" component={FieldAdapter} type="email" placeholder="example@example.com" />
     <p>or a <b>phone number</b></p>
     <Field name="phone" component={FieldAdapter} type="phone" />
@@ -57,7 +57,7 @@ const HireMe = ({ onSubmit }) => (
       <h2>Hire Me</h2>
 
       <p>Are you interested in training, consulting or some general React and Redux development stuff?
-      Just leave me a contact. I will reach to you ASAP, I promise :-)</p>
+      Just fill in the contact form. I will reach you ASAP, I promise :-)</p>
       <HireMeForm onSubmit={onSubmit} />
     </div>
   </section>

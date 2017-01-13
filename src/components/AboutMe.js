@@ -14,22 +14,22 @@ export default () => (
       <h2>I <i className="fa fa-heart" aria-hidden="true" /> React and Redux</h2>
 
       <p>
-        I really enjoy writing all kinds of front-end applications in modern JavaScript.
-        Thanks to CoffeScript and most importantly <b>Babel</b> we can just stop being limited
-        by browser capabilities and finally enjoy the coding. It all started in early
-        2015 when I had the first chance to explore the beauty of React and Flux.
-        I loved those concepts and it all made even more sense after exploring
-        immutable-js and mainly Redux.
+        I truly enjoy writing all kinds of front-end applications in modern JavaScript.
+        Thanks to CoffeScript and most importantly <b>Babel</b> we can liberate ourselves
+        from browser boundaries and get excited by coding again. It all started in early
+        2015 when I first encountered the beauty of React and Flux.
+        Those two concepts seemed natural and after exploring
+        immutable-js and mainly Redux everything fit in.
       </p>
 
-      <p>I specialize on what I love the most which is React and Redux,
-       hire me to utilize the most of my real experiences.</p>
+      <p>I specialize on what I love the most which is React and Redux.
+       Hire me to utilize the most of my real experiences.</p>
 
       <h3>Interested in looking into my code?</h3>
 
-      <p>How about you start by checking out source code of this website,
-       it&lsquo;s React with Redux and it&lsquo;s universal!
-        Looking into my open source contribution can give you a brief idea as&nbsp;well!</p>
+      <p>How about you start by checking out source code of this website? It&lsquo;s React with
+      Redux and it&lsquo;s universal! Looking into my open source contribution can give you a
+      brief idea as&nbsp;well!</p>
     </div>
   </section>
 );

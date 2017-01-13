@@ -14,10 +14,10 @@ export default () => (
           <a href="https://github.com/salsita/redux-elm">redux-elm</a>: An attempt to reproduce the best of The Elm Architecture in JavaScript.
         </li>
         <li>
-          <a href="https://github.com/salsita/redux-side-effects">redux-side-effects</a>: Elmish model of dealing with side-effects in redux utilizing generators.
+          <a href="https://github.com/salsita/redux-side-effects">redux-side-effects</a>: Elmish model of dealing with side effects in Redux - utilizing generators.
         </li>
         <li>
-          <a href="https://github.com/salsita/redux-saga-rxjs">redux-saga-rxjs:</a> Rxjs version of redux-saga, couple months later the same idea is used in redux-observable.
+          <a href="https://github.com/salsita/redux-saga-rxjs">redux-saga-rxjs:</a> Rxjs version of redux-saga; A couple of months later the same idea is used in redux-observable.
         </li>
       </ul>
 
@@ -38,8 +38,8 @@ export default () => (
       </ul>
 
       <h3>Presentations</h3>
-      <p>I would like to spread the word so I usually give couple presentations a
-      year on local venues; WebExpo Prague, Reactive&nbsp;Roadshow
+      <p>I would like to spread the word so I usually give several presentations a
+      year at local venues; WebExpo Prague, Reactive&nbsp;Roadshow
       (Bratislava, Vienna, Brno), PragueJS...</p>
       <div id="presentation-embed-38898340" />
     </div>
