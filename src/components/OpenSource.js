@@ -41,7 +41,7 @@ export default () => (
       <p>I would like to spread the word so I usually give several presentations a
       year at local venues; WebExpo Prague, Reactive&nbsp;Roadshow
       (Bratislava, Vienna, Brno), PragueJS...</p>
-      <div id="presentation-embed-38898340" />
+      {/*<div id="presentation-embed-38898340" />*/}
     </div>
   </section>
 );
