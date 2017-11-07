@@ -1,32 +1,15 @@
-/* global devToolsExtension */
-import { createStore, applyMiddleware, compose } from 'redux';
-import createLogger from 'redux-logger';
-import createSagaMiddleware from 'redux-saga';
+import { createStore, compose } from "redux";
 
-import isProduction from 'helpers/isProduction';
-import isServer from 'helpers/isServer';
-import emptyMiddleware from 'helpers/emptyMiddleware';
+import reducer from "src/reducer";
 
-export default function configureStore(reducer, saga, state = undefined) {
-  const sagaMiddleware = createSagaMiddleware();
+const buildStore = () =>
+  createStore(
+    reducer,
+    compose(
+      typeof window !== "undefined" &&
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
+        window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+  );
 
-  let enhancer;
-  if (isProduction) {
-    enhancer = applyMiddleware(
-      sagaMiddleware
-    );
-  } else {
-    enhancer = applyMiddleware(
-      sagaMiddleware,
-      isServer ? emptyMiddleware : createLogger()
-    );
-
-    if (typeof window !== 'undefined' && window.devToolsExtension) {
-      enhancer = compose(enhancer, devToolsExtension());
-    }
-  }
-  const store = createStore(reducer, state, enhancer);
-  sagaMiddleware.run(saga);
-
-  return store;
-}
+export default buildStore;

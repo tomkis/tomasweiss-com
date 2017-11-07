@@ -1,7 +1,7 @@
 {
-  "presets": ["es2015", "react", "stage-2"],
+  "presets": ["next/babel"],
   "plugins": [
-    "transform-runtime",
-    ["module-resolver", {"root": ["src"]}]
+    ["module-resolver", {"root": ["./"]}],
+    ["inline-import", {"extensions": [".css"]}]
   ]
 }
