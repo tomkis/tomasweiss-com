@@ -14,10 +14,12 @@
   "homepage": "https://tomasweiss.com/",
   "scripts": {
     "dev": "next",
+    "clean": "rm -rf out",
     "build": "next build",
-    "export": "yarn build && next export ./",
+    "export": "yarn clean && yarn build && next export ./",
     "start": "next start",
-    "lint:eslint": "eslint --ignore-path .gitignore ."
+    "lint:eslint": "eslint --ignore-path .gitignore .",
+    "deploy": "yarn export && cd out && git init && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'deploy' && git push git@github.com:tomkis/tomasweiss-com gh-pages --force"
   },
   "dependencies": {
     "classnames": "^2.2.5",
