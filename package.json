@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export ./",
+    "export": "yarn build && next export ./",
     "start": "next start",
     "lint:eslint": "eslint --ignore-path .gitignore ."
   },

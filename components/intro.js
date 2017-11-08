@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import viewport from "viewport-dimensions";
 import FontAwesome from "react-fontawesome";
 
-import FadeIn from "components/animations/FadeIn";
-import FadeInUp from "components/animations/FadeInUp";
+import FadeIn from "components/animations/fade-in";
+import FadeInUp from "components/animations/fade-in-up";
 import Section from "components/visuals/section";
 
 export default class Intro extends Component {
@@ -11,7 +11,7 @@ export default class Intro extends Component {
     super(props);
 
     this.state = {
-      height: 0,
+      height: 1000,
       containerPadding: 0
     };
   }
@@ -36,7 +36,11 @@ export default class Intro extends Component {
               ref={el => {
                 this.container = el;
               }}
-              style={{ paddingTop: this.state.containerPadding }}
+              style={{
+                paddingTop: this.state.containerPadding,
+                visibility:
+                  this.state.containerPadding === 0 ? "hidden" : "visible"
+              }}
             >
               <FadeIn name="greetings" timeout={1500}>
                 <p className="greetings">Hello, I am Tomas Weiss</p>
@@ -130,6 +134,17 @@ export default class Intro extends Component {
               opacity: 1;
               transition: opacity 1s ease-in;
               transition-delay: 0.5s;
+            }
+
+            .fade-in-up-appear {
+              opacity: 0;
+              transform: translate3d(0, 100%, 0);
+            }
+            .fade-in-up-appear-active {
+              opacity: 1;
+              transform: none;
+              transition: all 0.5s ease-out;
+              transition-delay: 1.5s;
             }
           `}</style>
         </div>
