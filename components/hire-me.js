@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import { isValidPhoneNumber } from "react-phone-number-input";
 import { reduxForm, SubmissionError } from "redux-form";
 import { validate as isValidEmail } from "email-validator";
@@ -9,6 +9,7 @@ import Field from "components/forms/field";
 import Heading2 from "components/visuals/heading-2";
 import Paragraph from "components/visuals/paragraph";
 import Section from "components/visuals/section";
+import { FORM_SUBMITTED } from "src/reducer";
 
 const fieldValidation = values => {
   const errors = {};
@@ -92,7 +93,23 @@ const HireMeForm = reduxForm({
   </form>
 ));
 
-const HireMe = ({ onSubmit }) => (
+const submitForm = formSubmitted => async data => {
+  try {
+    formSubmitted();
+
+    await fetch("https://formspree.io/me@tomasweiss.com", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+  } catch (ex) {
+    console.error(ex);
+  }
+};
+
+const HireMe = ({ submitted, formSubmitted }) => (
   <Section id="consulting-and-training" style={{ backgroundColor: "#f1f1f1" }}>
     <Content>
       <Heading2>Hire Me</Heading2>
@@ -101,13 +118,32 @@ const HireMe = ({ onSubmit }) => (
         Redux development stuff? Just fill in the contact form. I will reach you
         ASAP, I promise :-)
       </Paragraph>
-      <HireMeForm onSubmit={onSubmit} />
+      <div className="form-wrapper">
+        {!submitted && <HireMeForm onSubmit={submitForm(formSubmitted)} />}
+        {submitted && (
+          <Paragraph>
+            <div className="thanks">Thank you!</div>
+          </Paragraph>
+        )}
+      </div>
     </Content>
+    <style jsx>{`
+      .form-wrapper {
+        min-height: 500px;
+      }
+      .thanks {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    `}</style>
   </Section>
 );
 
-HireMe.propTypes = {
-  onSubmit: PropTypes.func.isRequired
+const mapStateToProps = ({ submitted }) => ({ submitted });
+const mapDispatchToProps = {
+  formSubmitted: () => ({ type: FORM_SUBMITTED })
 };
 
-export default HireMe;
+export default connect(mapStateToProps, mapDispatchToProps)(HireMe);
